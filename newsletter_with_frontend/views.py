@@ -50,7 +50,8 @@ def get_user_profile(request, pk):
             # concatenating the email template and the user's content
             content = "{% load static %}" + content
             # Replacing a path for serving the static files(images) precisely
-            content = content.replace("/static/", "http://f9d5e4eba28a.ngrok.io/static/")
+            content = content.replace(
+                "/static/", "https://newsletter-waitress-test.herokuapp.com/static/")
             recipient = serializer.validated_data.get("recipient")
             sender = settings.EMAIL_HOST_USER
             # striped_tags = strip_tags(content)
