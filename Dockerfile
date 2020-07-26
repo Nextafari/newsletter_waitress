@@ -22,4 +22,4 @@ RUN pip install -r requirements.txt
 RUN python manage.py collectstatic --noinput
 
 # run waitress
-CMD gunicorn newsletter_test.wsgi.wsgi:application --bind 0.0.0.0:$PORT
+CMD gunicorn newsletter_test.wsgi:application --bind 0.0.0.0:$PORT
