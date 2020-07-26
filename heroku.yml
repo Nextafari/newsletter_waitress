@@ -2,4 +2,4 @@ build:
   docker:
     web: Dockerfile
 run:
-  web: waitress-serve --port=$PORT newsletter_test.wsgi:application
+  web: gunicorn newsletter_test.wsgi.wsgi:application --bind 0.0.0.0:$PORT

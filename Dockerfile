@@ -17,3 +17,9 @@ COPY . /newsletter_with_frontend/
 
 # Install any needed packages specified in requirements.txt
 RUN pip install -r requirements.txt
+
+# collect static files
+RUN python manage.py collectstatic --noinput
+
+# run waitress
+CMD gunicorn newsletter_test.wsgi.wsgi:application --bind 0.0.0.0:$PORT
