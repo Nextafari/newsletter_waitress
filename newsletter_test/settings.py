@@ -146,8 +146,8 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'immanuelhng@gmail.com' # this is exactly the value 'apikey'
-EMAIL_HOST_PASSWORD = 'angelica2020'
+EMAIL_HOST_USER = '' # this is exactly the value 'apikey'
+EMAIL_HOST_PASSWORD = ''
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
